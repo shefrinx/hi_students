@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hi Students</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Hi Students 👋</h1>
+
+    <div class="form-container">
+      <h2>Add Student</h2>
+
+      <input type="text" id="name" placeholder="Student Name" />
+
+      <input type="number" id="age" placeholder="Age" />
+
+      <input type="text" id="department" placeholder="Department" />
+
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <div class="students-container">
+      <h2>Students</h2>
+
+      <div id="studentList">No students yet.</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
