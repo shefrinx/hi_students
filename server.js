@@ -4,7 +4,7 @@ const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const url = process.env.MONGODB_URI;
 const client = new MongoClient(url);
@@ -23,7 +23,7 @@ async function startServer() {
     const db = client.db("studentDB");
     students = db.collection("students");
 
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`Website running at http://localhost:${PORT}`);
     });
   } catch (error) {
